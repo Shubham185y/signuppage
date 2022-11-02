@@ -27,7 +27,7 @@ app.post("/", function(req, res){
     };
 
     const jsondata =JSON.stringify(data);
-    const url ="https://us3.api.mailchimp.com/3.0/lists/8f691d488a";
+    const url ="https://us13.api.mailchimp.com/3.0/lists/8f691d488a";
 
     const options ={
         method: "POST",
@@ -55,7 +55,7 @@ app.get("/", function(req, res){
     res.sendFile(__dirname + "/index.html");
 });
 
-app.listen(3000, function(){
+app.listen(process.env.PORT || 3000, function(){
     console.log("Server is running on port 3000");
 })
 
